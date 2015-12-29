@@ -8,3 +8,4 @@ services:
 before_install:
   - docker build -t patrickpierson/python .
   - docker images
+  - docker run -d patrickpierson/python /bin/bash -c "python3 --version;"
