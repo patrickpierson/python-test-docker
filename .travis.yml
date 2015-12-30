@@ -1,6 +1,6 @@
 sudo: required
 
-language: ruby
+language: python
 
 services:
   - docker
@@ -8,4 +8,6 @@ services:
 before_install:
   - docker build -t patrickpierson/python .
   - docker images
+
+script:
   - docker run -d patrickpierson/python /bin/bash -c "python3 --version;"
